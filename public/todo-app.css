@@ -1,0 +1,111 @@
+.todo-main {
+  font-family: "Open Sans", sans-serif;
+  max-width: 600px;
+  margin: 0 auto;
+  margin-top: 32px;
+  color: #453c52;
+}
+
+.todo-main__title {
+  font-family: "Open Sans", sans-serif;
+  font-size: 20px;
+  line-height: 1.6;
+  margin-bottom: 12px;
+  font-weight: 600;
+}
+
+.add-todo {
+  display: flex;
+  height: 32px;
+  align-items: stretch;
+  margin-bottom: 24px;
+}
+
+.add-todo__input {
+  padding: 6px 12px;
+  font-size: 14px;
+  color: #726a7e;
+  margin-right: 10px;
+  border: 1px solid #bfb8cc;
+  border-radius: 4px;
+}
+
+.add-todo__date {
+  padding: 6px;
+  font-size: 14px;
+  color: #726a7e;
+  margin-right: 10px;
+  border: 1px solid #bfb8cc;
+  border-radius: 4px;
+}
+
+.add-todo__button {
+  font-size: 14px;
+  color: #ffffff;
+  background-color: #48bb78;
+  border: 1px solid transparent;
+  border-radius: 4px;
+  padding: 6px 22px;
+}
+
+.todo-section {
+  margin-bottom: 20px;
+}
+
+.todo-section__title {
+  display: flex;
+  align-items: center;
+}
+
+.todo-section__due {
+  font-size: 14px;
+  font-weight: 600;
+  margin-right: 8px;
+  line-height: 1.4;
+}
+
+.todo-section__count {
+  font-size: 12px;
+}
+.todo-item {
+  margin: 8px;
+  width: max-content;
+}
+
+.todo-item__container {
+  display: flex;
+  align-items: center;
+  font-size: 14px;
+}
+
+.todo-item__container:hover {
+  background-color: #f1edf7;
+  border-radius: 4px;
+}
+
+.todo-item__checkbox {
+  width: 16px;
+  height: 16px;
+  margin-right: 8px;
+}
+
+.todo-item__overdue {
+  font-size: 12px;
+  color: #c53030;
+  margin-left: 10px;
+}
+
+.todo-item__date {
+  margin-left: 10px;
+  font-size: 12px;
+  color: #726a7e;
+}
+
+.todo-item__delete {
+  visibility: hidden;
+  margin-left: 21px;
+}
+
+.todo-item__container:hover .todo-item__delete {
+  visibility: visible;
+}

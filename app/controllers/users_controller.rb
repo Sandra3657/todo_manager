@@ -18,4 +18,13 @@ class UsersController < ApplicationController
     response_text = "Created new USER, Name:- #{name}, Email:- #{email}"
     render plain: response_text
   end
+
+  def login
+    email = params[:email]
+    password = params[:password]
+    user = User.where("email = ? AND password = ?", email, password)
+
+    response_text = user.empty? ? "false" : "true"
+    render plain: response_text
+  end
 end

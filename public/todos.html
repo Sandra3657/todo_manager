@@ -1,98 +1,99 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Our Todo Management App</title>
-    <link rel="stylesheet" type="text/css" href="reset.css" />
-    <link rel="stylesheet" type="text/css" href="todo-app.css" />
-    <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
-  </head>
 
-  <body>
-    <article class="todo-main">
-      <h1 class="todo-main__title">My To-do list</h1>
-      <section class="add-todo">
-        <input type="text" class="add-todo__input" name="new-todo" placeholder="What's next? ">
-        <input type="date" class="add-todo__date" name="date">
-        <button class="add-todo__button">Add</button>
-      </section>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Our Todo Management App</title>
+  <link rel="stylesheet" type="text/css" href="reset.css" />
+  <link rel="stylesheet" type="text/css" href="todo-app.css" />
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+</head>
 
-      <section class="todo-section">
-        <div class="todo-section__title">
-          <p class="todo-section__due">Due Today</p>
-          <p class="todo-section__count">0/4</p>
-        </div>
-        <ul>
-          <li class="todo-item">
-            <label class="todo-item__container">
-              <input class="todo-item__checkbox" type="checkbox">
-              <p>Submit SaaS 201 Project</p>
-              <p class="todo-item__overdue">Overdue</p>
-              <a class="todo-item__delete">
-                <img src="delete.svg" >
-              </a>
+<body>
+  <article class="todo-main">
+    <h1 class="todo-main__title">My To-do list</h1>
+    <section class="add-todo">
+      <input type="text" class="add-todo__input" name="new-todo" placeholder="What's next? ">
+      <input type="date" class="add-todo__date" name="date">
+      <button class="add-todo__button">Add</button>
+    </section>
+
+    <section class="todo-section">
+      <div class="todo-section__title">
+        <p class="todo-section__due">Due Today</p>
+        <p class="todo-section__count">0/4</p>
+      </div>
+      <ul>
+        <li class="todo-item">
+          <label class="todo-item__container">
+            <input class="todo-item__checkbox" type="checkbox">
+            <p>Submit SaaS 201 Project</p>
+            <p class="todo-item__overdue">Overdue</p>
+            <a class="todo-item__delete">
+              <img src="delete.svg">
+            </a>
           </label>
-          </li>
-          <li class="todo-item">
-            <label class="todo-item__container">
-              <input class="todo-item__checkbox" type="checkbox">
-              <p>Call Accountant</p>
-              <a class="todo-item__delete">
-                <img src="delete.svg" >
-              </a>
+        </li>
+        <li class="todo-item">
+          <label class="todo-item__container">
+            <input class="todo-item__checkbox" type="checkbox">
+            <p>Call Accountant</p>
+            <a class="todo-item__delete">
+              <img src="delete.svg">
+            </a>
           </label>
-          </li>
-        </ul>
-      </section>
+        </li>
+      </ul>
+    </section>
 
-      <section class="todo-section">
-        <div class="todo-section__title">
-          <p class="todo-section__due">Due Tomorrow</p>
-          <p class="todo-section__count">0/3</p>
-        </div>
-        <ul>
-          <li class="todo-item">
-            <label class="todo-item__container">
-              <input class="todo-item__checkbox" type="checkbox">
-              <p>Refill groceries</p>
-              <a class="todo-item__delete">
-                <img src="delete.svg" >
-              </a>
+    <section class="todo-section">
+      <div class="todo-section__title">
+        <p class="todo-section__due">Due Tomorrow</p>
+        <p class="todo-section__count">0/3</p>
+      </div>
+      <ul>
+        <li class="todo-item">
+          <label class="todo-item__container">
+            <input class="todo-item__checkbox" type="checkbox">
+            <p>Refill groceries</p>
+            <a class="todo-item__delete">
+              <img src="delete.svg">
+            </a>
           </label>
 
-        </ul>
-      </section>
-      <section class="todo-section">
-        <div class="todo-section__title">
-          <p class="todo-section__due">Remaining</p>
-          <p class="todo-section__count">0/3</p>
-        </div>
-        <ul>
-          <li class="todo-item">
-            <label class="todo-item__container">
-              <input class="todo-item__checkbox" type="checkbox">
-              <p>Water the plants</p>
+      </ul>
+    </section>
+    <section class="todo-section">
+      <div class="todo-section__title">
+        <p class="todo-section__due">Remaining</p>
+        <p class="todo-section__count">0/3</p>
+      </div>
+      <ul>
+        <li class="todo-item">
+          <label class="todo-item__container">
+            <input class="todo-item__checkbox" type="checkbox">
+            <p>Water the plants</p>
 
 
-              <p class="todo-item__date">Jan 21</p>
-              <a class="todo-item__delete">
-                <img src="delete.svg" >
-              </a>
+            <p class="todo-item__date">Jan 21</p>
+            <a class="todo-item__delete">
+              <img src="delete.svg">
+            </a>
           </label>
-          </li>
-          <li class="todo-item">
-            <label class="todo-item__container">
-              <input class="todo-item__checkbox" type="checkbox">
-              <p>File taxes</p>
+        </li>
+        <li class="todo-item">
+          <label class="todo-item__container">
+            <input class="todo-item__checkbox" type="checkbox">
+            <p>File taxes</p>
 
-              <p class="todo-item__date">Jan 22</p>
-              <a class="todo-item__delete">
-                <img src="delete.svg" >
-              </a>
+            <p class="todo-item__date">Jan 22</p>
+            <a class="todo-item__delete">
+              <img src="delete.svg">
+            </a>
           </label>
-          </li>
+        </li>
         </li>
         <li class="todo-item">
           <label class="todo-item__container">
@@ -101,12 +102,13 @@
 
             <p class="todo-item__date">Jan 23</p>
             <a class="todo-item__delete">
-              <img src="delete.svg" >
+              <img src="delete.svg">
             </a>
-        </label>
+          </label>
         </li>
-        </ul>
-      </section>
-    </article>
-  </body>
+      </ul>
+    </section>
+  </article>
+</body>
+
 </html>

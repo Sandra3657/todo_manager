@@ -1,0 +1,20 @@
+<section class="todo-section">
+    <div class="todo-section__title">
+      <p class="todo-section__due"><%= section_title%></p>
+      <p class="todo-section__count">0/4</p>
+    </div>
+    <ul>
+      <% Todo.all.each do|todo|%>
+        <li class="todo-item">
+          <label class="todo-item__container">
+            <input class="todo-item__checkbox" type="checkbox">
+            <%= todo.todo_text %>
+            <p class="todo-item__overdue">Overdue</p>
+            <a class="todo-item__delete">
+              <img src="delete.svg">
+            </a>
+          </label>
+        </li>
+      <% end %>
+    </ul>
+  </section>

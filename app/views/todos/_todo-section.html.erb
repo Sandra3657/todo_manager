@@ -5,20 +5,21 @@
     </div>
     <ul>
       <% todos.each do|todo|%>
-        <li class="todo-item">
-          <label class="todo-item__container">
-            <input class="todo-item__checkbox" type="checkbox">
-            <% if !overdue or !todo.completed%>
-              <%= todo.todo_text %>
-            <% end %>
-            <% if show_due_date %>
-              <p class=todo_item__due-date><%= todo.due_date.to_s(:short) %></p>
-            <% end %>
-            <a class="todo-item__delete">
-              <img src="delete.svg">
-            </a>
-          </label>
-        </li>
+        <% if !overdue or !todo.completed%>
+          <li class="todo-item">
+            <label class="todo-item__container">
+              <input class="todo-item__checkbox" type="checkbox">
+
+                <%= todo.todo_text %>
+              <% if show_due_date %>
+                <p class=todo_item__due-date><%= todo.due_date.to_s(:short) %></p>
+              <% end %>
+              <a class="todo-item__delete">
+                <img src="delete.svg">
+              </a>
+            </label>
+          </li>
+        <% end %>
       <% end %>
     </ul>
   </section>

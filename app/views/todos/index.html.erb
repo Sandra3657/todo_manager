@@ -1,0 +1,30 @@
+<article class="todo-main">
+  <h1 class="todo-main__title">My To-do list</h1>
+  <section class="add-todo">
+    <input type="text" class="add-todo__input" name="new-todo" placeholder="What's next? ">
+    <input type="date" class="add-todo__date" name="date">
+    <button class="add-todo__button">Add</button>
+  </section>
+
+  <section class="todo-section">
+    <div class="todo-section__title">
+      <p class="todo-section__due">Due Today</p>
+      <p class="todo-section__count">0/4</p>
+    </div>
+    <ul>
+      <% Todo.all.each do|todo|%>
+        <li class="todo-item">
+          <label class="todo-item__container">
+            <input class="todo-item__checkbox" type="checkbox">
+            <%= todo.todo_text %>
+            <p class="todo-item__overdue">Overdue</p>
+            <a class="todo-item__delete">
+              <img src="delete.svg">
+            </a>
+          </label>
+        </li>
+      <% end %>
+    </ul>
+  </section>
+
+</article>

@@ -1,28 +1,28 @@
 <section class="todo-section">
-    <div class="todo-section__title">
-      <p class="todo-section__due"><%= section_title%></p>
-      <p class="todo-section__count"><%= todos.completed.count %>/<%= todos.count %></p>
-    </div>
-    <ul>
-      <% todos.each do|todo|%>
-        <% if !overdue or !todo.completed%>
-          <li class="todo-item">
-            <label class="todo-item__container">
-              <% if todo.completed %>
-                <input class="todo-item__checkbox" type="checkbox" checked>
-              <% else %>
-                <input class="todo-item__checkbox" type="checkbox">
-              <% end %>
-              <p class="todo-item__text"><%= todo.todo_text %></p>
-              <% if show_due_date %>
-                <p class=todo_item__due-date><%= todo.due_date.to_s(:short) %></p>
-              <% end %>
-              <a class="todo-item__delete">
-                <img src="delete.svg">
-              </a>
-            </label>
-          </li>
-        <% end %>
+  <div class="todo-section__title">
+    <p class="todo-section__due"><%= section_title%></p>
+    <p class="todo-section__count"><%= todos.completed.count %>/<%= todos.count %></p>
+  </div>
+  <ul>
+    <% todos.each do|todo|%>
+      <% if !overdue or !todo.completed%>
+        <li class="todo-item">
+          <label class="todo-item__container">
+            <% if todo.completed %>
+              <input class="todo-item__checkbox" type="checkbox" checked />
+            <% else %>
+              <input class="todo-item__checkbox" type="checkbox" />
+            <% end %>
+            <p class="todo-item__text"><%= todo.todo_text %></p>
+            <% if show_due_date %>
+              <p class="todo_item__due-date"><%= todo.due_date.to_s(:short) %></p>
+            <% end %>
+            <a class="todo-item__delete">
+              <img src="delete.svg" />
+            </a>
+          </label>
+        </li>
       <% end %>
-    </ul>
-  </section>
+    <% end %>
+  </ul>
+</section>

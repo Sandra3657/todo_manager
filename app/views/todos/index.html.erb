@@ -5,7 +5,16 @@
     <input type="date" class="add-todo__date" name="date">
     <button class="add-todo__button">Add</button>
   </section>
-  <%=render partial: "todo-section", locals: {section_title: "Overdue"} %>
-  <%=render partial: "todo-section", locals: {section_title: "Due Today"} %>
-  <%=render partial: "todo-section", locals: {section_title: "Due Later"} %>
+  <%=render partial: "todo-section", locals: {
+    section_title: "Overdue",
+    todos: Todo.overdue,
+    show_due_date: true} %>
+  <%=render partial: "todo-section", locals: {
+    section_title: "Due Today",
+    todos: Todo.due_today,
+    show_due_date: false} %>
+  <%=render partial: "todo-section", locals: {
+    section_title: "Due Later",
+    todos: Todo.due_later,
+    show_due_date: true} %>
   </article>

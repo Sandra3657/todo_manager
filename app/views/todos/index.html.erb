@@ -1,9 +1,9 @@
 <article class="todo-main">
   <h1 class="todo-main__title">My To-do list</h1>
   <%= form_with(url: "/todos", method: "post", class: "add-todo") do %>
-    <input type="text" class="add-todo__input" name="todo_text" placeholder="What's next? ">
-    <input type="date" class="add-todo__date" name="due_date">
-    <input class="add-todo__button" type="submit" value="Add">
+    <%= text_field_tag "todo_text", nil, placeholder:"What's next? ", class: "add-todo__input"%>
+    <%= date_field_tag "due_date", nil, class: "add-todo__date"%>
+    <%= submit_tag "Add", class: "add-todo__button"%>
   <% end %>
 
   <%=render partial: "todo-section", locals: {

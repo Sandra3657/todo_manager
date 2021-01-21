@@ -8,14 +8,8 @@
       <% if !overdue or !todo.completed%>
         <li class="todo-item">
           <label class="todo-item__container">
-
             <%= form_with(url: "/todos/#{todo.id}", method: "put") do %>
-              <input
-              class="todo-item__checkbox"
-              name="completed"
-              type="checkbox" <%= todo.completed ? "checked" : "" %>
-              onclick="this.form.submit()"
-              />
+              <%=check_box_tag 'completed','1',checked=todo.completed,class:'todo-item__checkbox',:onclick=>'this.form.submit()' %>
             <% end %>
             <p class='<%= todo.completed ? "todo_item__completed-text" : "" %>'><%= todo.todo_text %></p>
             <% if show_due_date %>
@@ -23,7 +17,7 @@
             <% end %>
             <a class="todo-item__delete">
               <%= form_with(url: "/todos/#{todo.id}",method:"delete") do %>
-                <input type="image" src="delete.svg">
+                <%= image_submit_tag("delete.svg") %>
               <% end %>
             </a>
           </label>

@@ -22,7 +22,9 @@
               <p class="todo_item__due-date"><%= todo.due_date.to_s(:short) %></p>
             <% end %>
             <a class="todo-item__delete">
-              <img src="delete.svg" />
+              <%= form_with(url: "/todos/#{todo.id}",method:"delete") do %>
+                <input type="image" src="delete.svg">
+              <% end %>
             </a>
           </label>
         </li>

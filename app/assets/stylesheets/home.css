@@ -13,13 +13,13 @@
 }
 
 .user-header {
-  width: fit-content;
-  margin: auto;
   padding: 10px;
   background-color: lightgray;
   font-size: 14px;
   margin-top: 32px;
   margin-bottom: 10px;
+  display: flex;
+  justify-content: space-between;
 }
 
 .page-content {

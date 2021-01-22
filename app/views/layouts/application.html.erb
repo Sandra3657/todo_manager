@@ -12,6 +12,13 @@
   </head>
 
   <body>
-    <%= yield %>
+    <article class="page-content">
+      <% if @current_user %>
+        <p class="user-header">
+          Welcome! <%= @current_user.first_name %>
+        </p>
+      <% end %>
+      <%= yield %>
+    <article>
   </body>
 </html>

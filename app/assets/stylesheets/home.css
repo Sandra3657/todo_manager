@@ -1,6 +1,4 @@
 .home__section {
-  width: max-content;
-  margin: 0 auto;
   margin-top: 32px;
 }
 
@@ -12,4 +10,19 @@
 .home__authenticate {
   font-size: 16px;
   margin-bottom: 20px;
+}
+
+.user-header {
+  width: fit-content;
+  margin: auto;
+  padding: 10px;
+  background-color: lightgray;
+  font-size: 14px;
+  margin-top: 32px;
+  margin-bottom: 10px;
+}
+
+.page-content {
+  margin: 0 auto;
+  width: 600px;
 }

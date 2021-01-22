@@ -1,0 +1,27 @@
+<article class="new-users__main">
+  <p class="new-users__title"> Welcome, new user</p>
+
+  <section class="new-users">
+    <%= form_with url: users_path do |form|%>
+      <div class="new-users__section">
+        <p class="new-users__label">First Name: </p>
+        <%= form.text_field :first_name, class:"new-users__input"%>
+      </div>
+      <div class="new-users__section">
+        <p class="new-users__label">Last Name: </p>
+        <%= form.text_field :last_name, class:"new-users__input"%>
+      </div>
+      <div class="new-users__section">
+        <p class="new-users__label">Email: </p>
+        <%= form.email_field :email, class:"new-users__input"%>
+      </div>
+      <div class="new-users__section">
+        <p class="new-users__label">Password: </p>
+        <%= form.password_field :password, class:"new-users__input"%>
+      </div>
+      <div class="new-users__section">
+        <%= form.submit "Sign Up", class:"new-users__submit"%>
+      </div>
+    <% end %>
+  </section>
+</article>

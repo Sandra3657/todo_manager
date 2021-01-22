@@ -1,10 +1,10 @@
 <article class="todo-main">
   <h1 class="todo-main__title">My To-do list</h1>
-  <section class="add-todo">
-    <input type="text" class="add-todo__input" name="new-todo" placeholder="What's next? ">
-    <input type="date" class="add-todo__date" name="date">
-    <button class="add-todo__button">Add</button>
-  </section>
+  <%= form_with(url: "/todos", method: "post", class: "add-todo") do %>
+    <%= text_field_tag "todo_text", nil, placeholder:"What's next? ", class: "add-todo__input"%>
+    <%= date_field_tag "due_date", nil, class: "add-todo__date"%>
+    <%= submit_tag "Add", class: "add-todo__button"%>
+  <% end %>
 
   <%=render partial: "todo-section", locals: {
     section_title: "Overdue",

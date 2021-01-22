@@ -89,7 +89,7 @@
   margin-right: 8px;
 }
 
-.todo-item__checkbox:checked ~ .todo-item__text {
+.todo_item__completed-text {
   text-decoration: line-through;
 }
 
